@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @goal.user_id %><br/>
+  <%= current_user.email %>
+</p>
+
+<p>
+  <strong>Number of sentence:</strong><br/>
+  <%= @goal.number_of_sentence %>
+</p>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<p>
+  <strong>Note:</strong><br/>
+  <%= simple_format(h @goal.note) %>
+</p>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<p>
+  <strong>Deadline:</strong><br/>
+  <%=  @goal.deadline %>
+</p>
+
+<%= link_to 'Edit', edit_goal_path(@goal) %> |
+<%= link_to 'Back', goals_path %>
