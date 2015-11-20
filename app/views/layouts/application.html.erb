@@ -6,14 +6,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
-  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
     <![endif]-->
 </head>
 <body>
-  <div class="container">
      <% if user_signed_in?  %>
         <h3>hello <%= current_user.email %>!</h3>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
@@ -28,6 +26,5 @@
       <% end %>
       <br>
     <%= yield %>
-  </div>
 </body>
 </html>
