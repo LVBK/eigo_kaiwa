@@ -1,0 +1,29 @@
+<%= form_for(@user_log) do |f| %>
+  <% if @user_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_log.errors.count, "error") %> prohibited this user_log from being saved:</h2>
+
+      <ul>
+      <% @user_log.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= current_user.email %>
+  </div>
+  <div class="field">
+    <%= f.label :sentence_learning %><br>
+    <%= f.number_field :sentence_learning %>
+  </div>
+    <div class="field">
+    <%= f.label :created_at %><br>
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
