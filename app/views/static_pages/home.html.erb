@@ -1,3 +1,209 @@
 <%= provide(:title, "ホーム") %>
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<body data-spy="scroll" data-target=".navbar-fixed-top">
+    <%= render 'layouts/header' %>
+    <!-- Intro Section -->
+            <section id="home" class="home-section">
+                <div class="container-fluid">
+                    
+                </div>
+             
+                <!--<h1 class="wellcome">Hi,Wellcome</h1>-->
+            </section>
+
+    <!-- About Section -->
+            <section id="about" class="about-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1>About Section</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    <!-- Team Section -->
+             <section id="team" class="team-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 class="section-heading">Nakama Team</h2>
+                            <h3 class="section-subheading text-muted">Hedspi Students,Hanoi University Of Science And Technology.</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="assets/team/namnt.jpg" class="img-responsive img-circle img-centered" alt="">
+                                <h4>Kay Garland</h4>
+                                <p class="text-muted">Lead Designer</p>
+                                <ul class="list-inline social-buttons">
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="assets/team/dung.jpg" class="img-responsive img-circle img-centered" alt="">
+                                <h4>Larry Parker</h4>
+                                <p class="text-muted">Lead Marketer</p>
+                                <ul class="list-inline social-buttons">
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="assets/team/hoi.jpg" class="img-responsive img-circle img-centered" alt="">
+                                <h4>Diana Pertersen</h4>
+                                <p class="text-muted">Lead Developer</p>
+                                <ul class="list-inline social-buttons">
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="assets/team/khanh.jpg" class="img-responsive img-circle img-centered" alt="">
+                                <h4>Kay Garland</h4>
+                                <p class="text-muted">Lead Designer</p>
+                                <ul class="list-inline social-buttons">
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="assets/team/cong.jpg" class="img-responsive img-circle img-centered" alt="">
+                                <h4>Larry Parker</h4>
+                                <p class="text-muted">Lead Marketer</p>
+                                <ul class="list-inline social-buttons">
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="team-member">
+                                <img src="assets/team/quy.jpg" class="img-responsive img-circle img-centered" alt="">
+                                <h4>Diana Pertersen</h4>
+                                <p class="text-muted">Lead Developer</p>
+                                <ul class="list-inline social-buttons">
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+
+    <!-- Contact Section -->
+
+            <section id="contact" class="contact-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="well well-sm">
+                                <form class="form-horizontal" method="post">
+                                    <fieldset>
+                                        <legend class="text-center map-header">Contact us</legend>
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                            <div class="col-md-8">
+                                                <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                            <div class="col-md-8">
+                                                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                                            <div class="col-md-8">
+                                                <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                            <div class="col-md-8">
+                                                <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                                            <div class="col-md-8">
+                                                <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-md-12 text-center">
+                                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <div class="panel panel-default">
+                                    <div class="text-center map-header">Our Office</div>
+                                    <div class="panel-body text-center">
+                                        <h4>Address</h4>
+                                        <div>
+                                            121 Dinh Tien Hoang<br />
+                                            Ha Noi, Viet Nam<br />
+                                            #04 3989 1234<br />
+                                            support@eigokaiwa.com<br />
+                                        </div>
+                                        <hr />
+                                        <div id="map1" class="map">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+        <%= render 'layouts/footer' %>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+<!--</div>-->
+</body>
