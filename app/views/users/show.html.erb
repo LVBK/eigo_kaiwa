@@ -1,7 +1,45 @@
-<h3><%= @user.name %></h3>
-<h3><%= @user.email %></h3>
-<h3><%= @user.age %></h3>
-<h3><%= @user.gender %></h3>
+<%= render 'layouts/header2' %>
+<div class="jumbotron" style="padding: 100px">
+     <div class="section">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-10 col-md-offset-1 white-form" style='padding:30px'>
+            <h2 class="text-center">Profile</h2> 
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="inputName" class="control-label">Name</label>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" disabled="disabled" class="form-control"  id="inputName" value="<%= @user.name %>">
+                </div>
+              </div>    
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="inputEmail3" class="control-label">Email</label>
+                </div>
+                <div class="col-sm-10">
+                  <input type="email" disabled="disabled" class="form-control"  id="inputEmail3" value="<%= @user.email %>">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="inputAge" class="control-label">Age</label>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" disabled="disabled" class="form-control"  id="inputAge" value="<%= @user.age %>">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="inputGender" class="control-label">Gender</label>
+                </div>
+                <div class="col-sm-10">
+                  <input type="email" disabled="disabled" class="form-control"  id="inputGender" value="<%= @user.gender %>">
+                </div>
+              </div>
+            </form>
 <hr />
 <% if @is_me %>
 <%     @user.friends.each_with_index do |friend, i| %>
@@ -20,14 +58,14 @@
     <%= submit_tag "Request", class: "form_submit" %>    
 <% end %>
 <%         when :requested %>
-<h4>Requested</h4>
+<h4 class="text-center">Requested</h4>
 <%= form_tag "/friends/#{@friend.id}", method: :delete do %>
     <%= hidden_field_tag :id, @friend.id %>
     <%= hidden_field_tag :friend_id, @user.id %>
     <%= submit_tag "Remove request", class: "form_submit" %>    
 <% end %>
 <%         when :be_requested %>
-<h4>Be Requested</h4>
+<h4 class="text-center">Be Requested</h4>
 <%= form_tag "/friends/#{@friend.id}", method: :put do %>
     <%= hidden_field_tag :id, @friend.id %>
     <%= hidden_field_tag :friend_id, @user.id %>
@@ -39,7 +77,7 @@
     <%= submit_tag "Reject", class: "form_submit" %>    
 <% end %>
 <%         when :be_accepted, :accepted %>
-<h4>FRIEND</h4>
+<h4 class="text-center">FRIEND</h4>
 <%= form_tag "/friends/#{@friend.id}", method: :delete do %>
     <%= hidden_field_tag :id, @friend.id %>
     <%= hidden_field_tag :friend_id, @user.id %>
@@ -47,3 +85,12 @@
 <% end %>
 <%     end %>
 <% end %>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</div>    
+<%= render 'layouts/footer' %>
