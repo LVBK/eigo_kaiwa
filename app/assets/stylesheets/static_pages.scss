@@ -21,24 +21,29 @@
 .navbar {
     background-color:#222222;
 }
+
+.navbar-default{
+    border:none;
+}
+
 .wellcome {
     font-size: 100px;
     color: #E7E7E7;
 }
-
+.carousel-inner > img {
+    width:100%;
+}
 .home-section {
-    min-height: 650px;
-    padding-top: 250px;
-    background-image: url(4.jpg);
     text-align: center;
-    color: #fff;
-    background-attachment: scroll;
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    color: #222222;
+    // background-image: url(4.jpg);
+    // background-attachment: scroll;
+    // background-position: center center;
+    // background-repeat: none;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // background-size: cover;
+    // -o-background-size: cover;
 }
 
 .about-section {
@@ -160,4 +165,7 @@ ul.social-buttons li a:active {
 ////////////////////////////////////////////////////////////
 .log-section{
     margin:100px auto 50px;
+}
+.carousel{
+    padding: 0;
 }

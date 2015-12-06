@@ -42,8 +42,9 @@
                         </ul>
                       </li>
                     <% else %>
-                      <li><li><%= link_to "Sign in", new_user_session_path %></li></li>
-                      <li><%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %></li>
+                      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign_up">
+  Modal</button>
+
                     <% end %>
                 </ul>
             </div>
