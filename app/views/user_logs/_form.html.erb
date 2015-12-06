@@ -1,6 +1,9 @@
+  <div class="section">
+      <div class="container">
+        <div class="row">
 <%= form_for(@user_log) do |f| %>
   <% if @user_log.errors.any? %>
-    <div id="error_explanation">
+    <div class="col-md-8 col-md-offset-2" id="error_explanation">
       <h2><%= pluralize(@user_log.errors.count, "error") %> prohibited this user_log from being saved:</h2>
 
       <ul>
@@ -10,20 +13,31 @@
       </ul>
     </div>
   <% end %>
+          <div class="col-md-8 col-md-offset-2 white-form">
+            <form role="form">
 
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= current_user.email %>
-  </div>
-  <div class="field">
-    <%= f.label :sentence_learning %><br>
-    <%= f.number_field :sentence_learning %>
-  </div>
-    <div class="field">
-    <%= f.label :created_at %><br>
-    <%= f.datetime_select :created_at %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+              <div class="form-group has-feedback">
+                <label class="control-label" for="exampleInputEmail1">Email address</label>
+                <input class="form-control" id="exampleInputEmail1"
+                type="text" disabled="disabled" value="<%= current_user.email %>">
+              </div>
+              <div class="form-group has-feedback">
+                <label class="control-label" for="exampleInputPassword1">Sentence learning</label><br>
+                <%= f.number_field :sentence_learning %>
+              </div>
+              <div class="form-group has-feedback">
+                <label class="control-label">Create at</label><br>
+                <%= f.datetime_select :created_at %>
+              </div>
+              <div class="actions">
+                <%= f.submit nil, :class => 'btn btn-primary' %>
+              </div>
+            </form>
 <% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+

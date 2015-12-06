@@ -1,2 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+$icon-font-path: 'bootstrap/';
+.white-form{
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: -1px 3px 3px 2px #c7c8c9;
+  box-shadow: -1px 3px 3px 2px #c7c8c9;
+  padding:30px;
+}

@@ -1,33 +1,55 @@
-<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+<div class="jumbotron">
+<div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 white-form">
+            <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 <%= column_chart @groups_for_chart %>
 <%= line_chart @groups_for_chart %>
-
-<p id="notice"><%= notice %></p>
-
-<h1>Listing User Logs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Sentence learning</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @user_logs.each do |user_log| %>
+<p class="text-center" id="notice"><%= notice %></p>
+            <h2 class="text-center">Listing User Logs</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>User
+                    <br>
+                  </th>
+                  <th>Sentence learning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @user_logs.each do |user_log| %>
       <tr>
         <td><%= user_log.user.email %></td>
         <td><%= user_log.sentence_learning %></td>
-        <td><%= link_to 'Show', user_log %></td>
-        <td><%= link_to 'Edit', edit_user_log_path(user_log) %></td>
-        <td><%= link_to 'Destroy', user_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to user_log, class: '' do %>
+            <span class="glyphicon glyphicon-zoom-in"></span>
+          <% end %>  
+        </td>
+        <td>
+          <%= link_to edit_user_log_path(user_log), class: '' do %>
+            <span class="glyphicon glyphicon-edit"></span>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to user_log, method: :delete, data: { confirm: 'Are you sure?' }, class: '' do %>
+            <span class="glyphicon glyphicon-remove"></span>
+          <% end %>
+        </td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+              </tbody>
+            </table>
+            <div class="text-center">
+              <%= link_to( 'New User log', new_user_log_path, class: 'btn btn-large btn-primary') %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 <br>
 
-<%= link_to 'New User log', new_user_log_path %>
+
+</div>

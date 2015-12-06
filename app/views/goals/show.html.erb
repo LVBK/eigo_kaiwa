@@ -1,25 +1,41 @@
-<p id="notice"><%= notice %></p>
+<div class="jumbotron">
+  <p class="text-center" id="notice"><%= notice %></p>
+  <div class="section">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-6 col-md-offset-3 white-form">
+            <form role="form">
+                         
+              <div class="form-group has-feedback">
+                <label class="control-label" for="exampleInputEmail1">Email address</label>
+                <input class="form-control" id="exampleInputEmail1"
+                type="text" disabled="disabled" value="<%= current_user.email %>">
+              </div>
+              <div class="form-group has-feedback">
+                <label class="control-label" for="exampleInputPassword1">Number of sentence</label><br>
+                <%= @goal.number_of_sentence %>
+              </div>
+              <div class="form-group has-feedback">
+                <label class="control-label">Deadline</label><br>
+                <%=  @goal.deadline %>
+              </div>
+              <div class="form-group has-feedback">
+                <label class="control-label">Note</label><br>
+                <%= simple_format(h @goal.note) %>
+              </div>
+            </form>
 
-<p>
-  <strong>User:</strong>
-  <%= @goal.user_id %><br/>
-  <%= current_user.email %>
-</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<p>
-  <strong>Number of sentence:</strong><br/>
-  <%= @goal.number_of_sentence %>
-</p>
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-<p>
-  <strong>Note:</strong><br/>
-  <%= simple_format(h @goal.note) %>
-</p>
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-<p>
-  <strong>Deadline:</strong><br/>
-  <%=  @goal.deadline %>
-</p>
 
-<%= link_to 'Edit', edit_goal_path(@goal) %> |
-<%= link_to 'Back', goals_path %>
+
+
+<div style="margin-top:10px" class="text-center"><%= link_to 'Edit', edit_goal_path(@goal) %> |
+<%= link_to 'Back', goals_path %></div>
+
+</div>
+
